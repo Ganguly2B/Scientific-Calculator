@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Calculator Main Container */
+.calDiv {
+  width: 23rem;
+  padding: 0.6rem;
+  max-height: 100%;
+  background: linear-gradient(145deg, #6a0dad, #8a2be2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+
+/* Buttons with Glowing Effect */
+.calDiv__btn {
+  background: linear-gradient(145deg, #9370db, #ba55d3);
+  height: 2.5rem;
+  color: white;
+  width: 4.3rem;
+  margin: 0.2rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(186, 85, 211, 0.6);
+}
+
+.calDiv__btn:hover {
+  background: #6a0dad;
+  box-shadow: 0 0 15px rgba(186, 85, 211, 0.9);
+  transform: scale(1.05);
+}
+
+/* Fix |x| Button Alignment */
+.calDiv__btn--absolute {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+/* Fix Backspace Button Position */
+.calDiv__deleteBtnDiv {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.calDiv__deleteBtn--color {
+  background: transparent;
+  border: none;
+}
+
+/* Fix M Dropdown Button */
+.calDiv__dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.calDiv__dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #9370db;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.calDiv__dropdown:hover .calDiv__dropdown-content {
+  display: block;
+}
+
+/* Remove Hover Effect on Non-Buttons */
+.calDiv__text, .calDiv__label {
+  pointer-events: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Input Field */
+.calDiv__inputField {
+  height: 7rem;
+  font-size: 2.4rem;
+  margin-top: 1rem;
+  text-align: right;
+  background: #dda0dd;
+  color: black;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* History Drawer 
+.calDiv_drawer {
+  background: #7b68ee;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 4px 12px rgba(186, 85, 211, 0.35);
+}*/
+.calDiv_drawer {
+  position: absolute;
+  height: 26rem;
+  text-align: right;
+  z-index: 1;
+  background-color: #f8f9fa;
+  border: 0.01rem solid rgba(131, 131, 131, 0.35);
+  border-radius: 0.5rem 1rem 0rem 0rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0.1rem 0.03rem 0.31rem;
+  display: none;
+}
+.calculator-title {
+  color: white !important; /* Ensures text is white */
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+body {
+  background: url('https://wallpapers.com/images/hd/red-and-blue-calculators-yxm0myfzuym67431.jpg') no-repeat center center fixed; 
+  background-size: cover; /* Sets the background to black */
+  overflow: hidden;    /* Prevents scrolling issues */
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* responsive media queries */
+@media only screen and (max-width: 415px), (max-height: 600px) {
+  * {
+    font-size: 14px;
+  }
+
+}
